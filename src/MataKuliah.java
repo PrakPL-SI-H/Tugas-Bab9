@@ -127,7 +127,7 @@ public class MataKuliah extends JFrame {
             }
         }
     }
-    
+
     class Hitung implements ActionListener {
 
         @Override
@@ -143,5 +143,17 @@ public class MataKuliah extends JFrame {
 
     }
 
+    class hasilSemua implements ActionListener {
 
+        @Override
+        public void actionPerformed(ActionEvent ae) {
+            hasilsemua.setText(" HASIL NILAI AKHIR SEMUA MATA KULIAH" + "\n"
+                    + "\n" + "ASD                 : " + hasilASD + "\n"
+                    + "PEMLAN         : " + hasilPemlan + "\n"
+                    + "MATKOMLAN : " + hasilMatkomlan + "\n"
+                    + "PROBSTAT    : " + hasilProbstat + "\n \n"
+                    + "Terimakasih"
+            );
+        }
+    }
 }
