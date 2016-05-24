@@ -70,15 +70,15 @@ public class TFrame extends Frame {
 
         btnhasil = new Button("Hitung");
         add(btnhasil);
-        btnhasil.setBounds(160, 260, 100, 20);
+        btnhasil.setBounds(250, 250, 100, 20);
 
         tatampilsemua = new TextArea("");
         add(tatampilsemua);
         tatampilsemua.setBounds(110, 300, 235, 200);
 
-        btntampilkansemua = new Button("Tampilkan Nilai Semua mMtkul");
+        btntampilkansemua = new Button("Tampilkan Nilai Semua Matkul");
         add(btntampilkansemua);
-        btntampilkansemua.setBounds(110, 520, 235, 20);
+        btntampilkansemua.setBounds(110, 520, 235, 25);
 
         cbg = new CheckboxGroup();
         cbasd = new Checkbox("ASD", cbg, false);
@@ -102,10 +102,10 @@ public class TFrame extends Frame {
 
         @Override
         public void actionPerformed(ActionEvent event) {
-            double tugas = Integer.parseInt(tftugas.getText().trim());
-            double kuis = Integer.parseInt(tfkuis.getText().trim());
-            double uts = Integer.parseInt(tfuts.getText().trim());
-            double uas = Integer.parseInt(tfuas.getText().trim());
+            double tugas = Double.parseDouble(tftugas.getText().trim());
+            double kuis = Double.parseDouble(tfkuis.getText().trim());
+            double uts = Double.parseDouble(tfuts.getText().trim());
+            double uas = Double.parseDouble(tfuas.getText().trim());
             String hasil = "0";
             if (asd == true) {
                 hasil = String.valueOf((tugas + kuis + uts + uas) / 4);
