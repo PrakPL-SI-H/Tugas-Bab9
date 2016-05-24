@@ -127,5 +127,21 @@ public class MataKuliah extends JFrame {
             }
         }
     }
+    
+    class Hitung implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent ae) {
+            double tugas = Integer.parseInt(txtTugas.getText().trim());
+            double Quiz = Integer.parseInt(txtQuiz.getText().trim());
+            double UTS = Integer.parseInt(txtUTS.getText().trim());
+            double UAS = Integer.parseInt(txtUAS.getText().trim());
+            double nilai_akhir = ((tugas * 0.2) + (Quiz * 0.3) + (UTS * 0.2) + (UAS * 0.3));
+            String hasil = String.valueOf((tugas * 0.2) + (Quiz * 0.3) + (UTS * 0.2) + (UAS * 0.3));
+            txtHasil.setText(hasil);
+        }
+
+    }
+
 
 }
