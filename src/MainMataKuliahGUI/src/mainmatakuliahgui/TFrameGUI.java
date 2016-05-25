@@ -156,7 +156,16 @@ public class TFrameGUI extends Frame {
             int UAS = Integer.parseInt(txtUAS.getText().trim());
             String hasil = "";
 
-            
+            Object source = cbg.getSelectedCheckbox();
+            if (source == cbASD) {
+                output[0][0] = "ASD";
+                hasil = String.valueOf((tugas + kuis + UTS + UAS) / 5);
+                output[0][1] = hasil;
+            } else if (source == cbProglan) {
+                output[1][0] = "Pemlan";
+                hasil = String.valueOf(tugas / 5 + kuis / 5 + UTS / 5 + UAS / 5);
+                output[1][1] = hasil;
+            } 
         }
     }
 }
