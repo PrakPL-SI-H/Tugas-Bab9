@@ -89,5 +89,27 @@ public class FrameProgram extends Frame { //pemanggilan data di parent default d
 
     }
 
+    class main implements ItemListener {
+
+        @Override
+        public void itemStateChanged(ItemEvent x) {
+            int tugas,kuis,UTS,UAS;
+            Object pilCheck = x.getItemSelectable();
+
+            if (pilCheck == cbASD) {
+                txtTugas.setText("0");
+                tugas = Integer.parseInt(txtTugas.getText().trim());
+                txtKuis.setText("0");
+                kuis = Integer.parseInt(txtKuis.getText().trim());
+                txtUTS.setText("0");
+                UTS = Integer.parseInt(txtUTS.getText().trim());
+                txtUAS.setText("0");
+                UAS = Integer.parseInt(txtUAS.getText().trim());
+                String hasil = String.valueOf((tugas + kuis + UTS + UAS) / 3);
+                txtHasil.setText(hasil);
+
+            }
+    }
+
 
 }
