@@ -42,5 +42,47 @@ public class Frame1 extends JFrame {
         cbg.add(cbMatkomlan);
         cbg.add(cbProbstat);
 
+        //pilih check box akan setnol semua texfield nilai
+        cbASD.addItemListener(new mainAction());
+        cbPemlan.addItemListener(new mainAction());
+        cbMatkomlan.addItemListener(new mainAction());
+        cbProbstat.addItemListener(new mainAction());
+
+        //membuat label dan text field
+        lbTugas = new Label("Tugas : ");
+        add(lbTugas);
+        lbTugas.setBounds(100, 110, 60, 20);
+        txtTugas = new TextField();
+        add(txtTugas);
+        txtTugas.setBounds(200, 110, 60, 20);
+
+        lbKuis = new Label("Kuis : ");
+        add(lbKuis);
+        lbKuis.setBounds(100, 140, 70, 20);
+        txtKuis = new TextField();
+        add(txtKuis);
+        txtKuis.setBounds(200, 140, 60, 20);
+
+        lbUTS = new Label("UTS : ");
+        add(lbUTS);
+        lbUTS.setBounds(100, 170, 70, 20);
+        txtUTS = new TextField();
+        add(txtUTS);
+        txtUTS.setBounds(200, 170, 60, 20);
+
+        lbUAS = new Label("UAS : ");
+        add(lbUAS);
+        lbUAS.setBounds(100, 200, 70, 20);
+        txtUAS = new TextField();
+        add(txtUAS);
+        txtUAS.setBounds(200, 200, 60, 20);
+
+        lbHasil = new Label("Hasil : ");
+        add(lbHasil);
+        lbHasil.setBounds(100, 230, 70, 20);
+        txtHasil = new TextField();
+        add(txtHasil);
+        txtHasil.setBounds(200, 230, 60, 20);
+
         
 }
