@@ -104,5 +104,17 @@ public class Frame1 extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
-    
+
+    class mainAction implements ItemListener {
+
+        //jika klik salah satu check box maka akan set nol semua
+        @Override
+        public void itemStateChanged(ItemEvent e) {
+            txtTugas.setText("0");
+            txtKuis.setText("0");
+            txtUTS.setText("0");
+            txtUAS.setText("0");
+            txtHasil.setText("0");
+        }
+    }
 }
