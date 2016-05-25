@@ -74,8 +74,21 @@ public class TFrameGUI extends Frame {
         add(btnHasil);
         btnHasil.setBounds(120, 240, 100, 20);
 
-        
-        
+        txtArea = new TextArea();
+        add(txtArea);
+        txtArea.setBounds(70, 270, 250, 160);
+
+        btnTampil = new Button("Tampilkan semua nilai");
+        add(btnTampil);
+        btnTampil.setBounds(65, 450, 250, 20);
+
+        btnTampil.addActionListener(new mainAction1());
+        btnHasil.addActionListener(new mainAction());
+        cbASD.addItemListener(new main());
+        cbProbstat.addItemListener(new main());
+        cbProglan.addItemListener(new main());
+        cbMatkomlan.addItemListener(new main());
+
     }
 
 }
