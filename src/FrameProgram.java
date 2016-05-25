@@ -39,7 +39,7 @@ public class FrameProgram extends Frame { //pemanggilan data di parent default d
         cbMatkomlan = new Checkbox("Matkomlan",centang, false);
         this.add(cbMatkomlan).setBounds(110, 50, 90, 20);
         cbMatkomlan.addItemListener(new main());
-
+//pembuatan label untuk masing masing nilai
         lbUAS = new Label("UAS : ");
         add(lbUAS);
         lbUAS.setBounds(130, 80, 70, 20);
@@ -56,7 +56,7 @@ public class FrameProgram extends Frame { //pemanggilan data di parent default d
         lbHasil = new Label("Hasil : ");
         add(lbHasil);
         lbHasil.setBounds(130, 200, 70, 20);
-
+//pembuatan textfield untuk masing masing nilai
         txtUAS = new TextField("0");
         add(txtUAS);
         txtUAS.setBounds(240, 80, 60, 20);
@@ -185,14 +185,15 @@ public class FrameProgram extends Frame { //pemanggilan data di parent default d
     }
 
     class mainActionTampil implements ActionListener {
+        //untuk menampilkan hasil seluruh nilai mata kuliah actionlistener untuk tombol Tampilkan Semua Nilai
 
         @Override
         public void actionPerformed(ActionEvent event) {
             String hasil = "";
             mainAction a = new mainAction();
 
-            for (int i = 0; i < 4; i++) {
-                for (int j = 0; j < 2; j++) {
+            for (int i = 0; i < 4; i++) { //index ke-satu
+                for (int j = 0; j < 2; j++) {//index ke-dua
                     hasil += output[i][j];
                     if (j == 0) {
                         
