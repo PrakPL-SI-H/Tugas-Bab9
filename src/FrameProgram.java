@@ -40,8 +40,26 @@ public class FrameProgram extends Frame { //pemanggilan data di parent default d
         this.add(cbMatkomlan).setBounds(110, 50, 90, 20);
         cbMatkomlan.addItemListener(new main());
 
+        lbUAS = new Label("UAS : ");
+        add(lbUAS);
+        lbUAS.setBounds(130, 80, 70, 20);
+        lbUTS = new Label("UTS : ");
+        add(lbUTS);
+        lbUTS.setBounds(130, 110, 70, 20);
+        lbKuis = new Label("Kuis : ");
+        add(lbKuis);
+        lbKuis.setBounds(130, 140, 70, 20);
+        lbTugas = new Label("Tugas : ");
+        add(lbTugas);
+        lbTugas.setBounds(130, 170, 62, 20);
+
+        lbHasil = new Label("Hasil : ");
+        add(lbHasil);
+        lbHasil.setBounds(130, 200, 70, 20);
+
+        
+
     }
 
-    
 
 }
