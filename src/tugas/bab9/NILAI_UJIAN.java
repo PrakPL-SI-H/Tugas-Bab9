@@ -77,7 +77,12 @@ package Laporan;
          add(btnHasil);
          btnHasil.setBounds(160, 220, 100, 20);
  
- 
+  cbASD.addItemListener(new mainAction());
+         cbPemlan.addItemListener(new mainAction());
+         cbMatkomlan.addItemListener(new mainAction());
+         cbProbstat.addItemListener(new mainAction());
+         
+         
          btnHasil.addActionListener(new Hitung());
  
          hasiltotal = new TextArea();
