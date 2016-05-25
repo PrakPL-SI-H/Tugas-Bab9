@@ -94,8 +94,51 @@ package Laporan;
  
          btnHasilTotal.addActionListener(new hasilSemua());
          setDefaultCloseOperation(EXIT_ON_CLOSE);
+     }
+     class mainAction implements ItemListener {
+ 
+         @Override
+         public void itemStateChanged(ItemEvent e) {
+             double tugas = Integer.parseInt(txtTugas.getText().trim());
+             double Quiz = Integer.parseInt(txtKuis.getText().trim());
+             double UTS = Integer.parseInt(txtUTS.getText().trim());
+             double UAS = Integer.parseInt(txtUAS.getText().trim());
+             double nilai_akhir = ((tugas * 0.2) + (Quiz * 0.3) + (UTS * 0.2) + (UAS * 0.3));
+             String hasil = String.valueOf((tugas * 0.2) + (Quiz * 0.3) + (UTS * 0.2) + (UAS * 0.3));
+             Object source = e.getItemSelectable();
+             if (source == cbASD) {
+                 txtTugas.setText("0");
+                 txtKuis.setText("0");
+                 txtUTS.setText("0");
+                 txtUAS.setText("0");
+                 txtHasil.setText("0");
+                 hasilASD = hasil;
+             } else if (source == cbPemlan) {
+                 txtTugas.setText("0");
+                 txtKuis.setText("0");
+                 txtUTS.setText("0");
+                 txtUAS.setText("0");
+                 txtHasil.setText("0");
+                 hasilPemlan = hasil;
+             } else if (source == cbMatkomlan) {
+                 txtTugas.setText("0");
+                 txtKuis.setText("0");
+                 txtUTS.setText("0");
+                 txtUAS.setText("0");
+                 txtHasil.setText("0");
+                 hasilMatkomlan = hasil;
+             } else if (source == cbProbstat) {
+                 txtTugas.setText("0");
+                 txtKuis.setText("0");
+                 txtUTS.setText("0");
+                 txtUAS.setText("0");
+                 txtHasil.setText("0");
+                 hasilProbstat = hasil;
+             }
+         }
+     }
      
          
      }
- }
+ 
 
