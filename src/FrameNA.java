@@ -13,4 +13,15 @@ public class FrameNA extends Frame {
     Button btnHitung, btnTampil;
     TextArea taNilai;
     String asd = "-", pemlan = "-", matkomlan = "-", probstat = "-";
+
+    public FrameNA() {
+        setLayout(null);
+
+        addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                System.exit(0);
+            }
+        });
+    }
 }
