@@ -12,7 +12,7 @@ public class FrameProgram extends Frame { //pemanggilan data di parent default d
     CheckboxGroup centang;
     TextArea txtArea;
     Checkbox cbASD, cbProbstat, cbProglan, cbMatkomlan;
-    
+    JRadioButton cbgASD,cbgProbstat,cbgProglan,cbgMatkomlan;//pembuatan button dengan JRadioButton
     Button btnTampil, btnHasil;
 
 
