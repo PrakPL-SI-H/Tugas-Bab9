@@ -146,4 +146,10 @@ public class FrameProgram extends Frame { //pemanggilan data di parent default d
         }
     }
 
+    class mainAction implements ActionListener {
+
+
+    }
+
+    
 }
