@@ -131,6 +131,13 @@ public class FrameNA extends Frame {
                     txtHasil.setText(probstat);
                 }
             }
+            if (ae.getSource() == btnTampil) {
+                taNilai.setText("HASIL NILAI SEMUA MATA KULIAH\n\n"
+                        + "ASD\t\t: " + asd + "\n"
+                        + "Pemlan\t\t: " + pemlan + "\n"
+                        + "Matkomlan\t: " + matkomlan + "\n"
+                        + "Probstat\t\t: " + probstat);
+            }
         }
     }
 }
