@@ -151,10 +151,21 @@ package Laporan;
          }
  
      }
+    class hasilSemua implements ActionListener {
  
-         
+         @Override
+         public void actionPerformed(ActionEvent ae) {
+             hasiltotal.setText(" HASIL NILAI AKHIR SEMUA MATA KULIAH" + "\n"
+                     + "\n" + "ASD                 : " + hasilASD + "\n"
+                     + "PEMLAN         : " + hasilPemlan + "\n"
+                     + "MATKOMLAN : " + hasilMatkomlan + "\n"
+                     + "PROBSTAT    : " + hasilProbstat + "\n \n"
+                     
+             );
+         }
      }
+ }
+         
+     
  
-
-
 
