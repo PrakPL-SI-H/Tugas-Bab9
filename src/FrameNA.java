@@ -23,5 +23,10 @@ public class FrameNA extends Frame {
                 System.exit(0);
             }
         });
+
+        lbJudul = new Label("Hitung Nilai Akhir");
+        lbJudul.setFont(new Font("Arial", 1, 14));
+        add(lbJudul);
+        lbJudul.setBounds(100, 30, 170, 20);
     }
 }
