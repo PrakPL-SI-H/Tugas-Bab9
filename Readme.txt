@@ -6,8 +6,8 @@ pastikan ketika upload tugas dilakukan secara bertahap.karna mempengaruhi nilai
 baca ketentuan umum pengumpulan tugas [disini](https://www.github.com/PrakPL-SI-H/KetentuanUmum.git);
 
 
-Nama	: Mochammad Alif Kresnanto
+Nama	:  Mochammad Alif Kresnanto
 
-NIM 	: 155150400111125
+NIM 	:  155150400111125
 
-KELAS   : Sistem Informasi H
+KELAS   :  Sistem Informasi H
