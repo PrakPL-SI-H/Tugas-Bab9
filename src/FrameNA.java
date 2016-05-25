@@ -6,4 +6,11 @@ import javax.swing.ButtonGroup;
 
 public class FrameNA extends Frame {
 
+    JRadioButton rbASD, rbPemlan, rbMatkomlan, rbProbstat;
+    ButtonGroup rbg;
+    Label lbJudul, lbTugas, lbKuis, lbUTS, lbUAS, lbHasil;
+    TextField txtTugas, txtKuis, txtUTS, txtUAS, txtHasil;
+    Button btnHitung, btnTampil;
+    TextArea taNilai;
+    String asd = "-", pemlan = "-", matkomlan = "-", probstat = "-";
 }
