@@ -57,7 +57,35 @@ public class FrameProgram extends Frame { //pemanggilan data di parent default d
         add(lbHasil);
         lbHasil.setBounds(130, 200, 70, 20);
 
-        
+        txtUAS = new TextField("0");
+        add(txtUAS);
+        txtUAS.setBounds(240, 80, 60, 20);
+        txtUTS = new TextField("0");
+        add(txtUTS);
+        txtUTS.setBounds(240, 110, 60, 20);
+        txtKuis = new TextField("0");
+        add(txtKuis);
+        txtKuis.setBounds(240, 140, 60, 20);
+        txtTugas = new TextField("0");
+        add(txtTugas);
+        txtTugas.setBounds(240, 170, 60, 20);
+
+        txtHasil = new TextField("0");
+        add(txtHasil);
+        txtHasil.setBounds(240, 200, 60, 20);
+
+        btnHasil = new Button("Hitung");
+        add(btnHasil);
+        btnHasil.setBounds(160, 240, 100, 20);
+        btnHasil.addActionListener(new mainAction());
+        txtArea = new TextArea();
+        add(txtArea);
+        txtArea.setBounds(80, 270, 250, 160);
+
+        btnTampil = new Button("SEMUA NILAI");
+        add(btnTampil);
+        btnTampil.setBounds(80, 450, 250, 20);
+        btnTampil.addActionListener(new mainActionTampil());
 
     }
 
