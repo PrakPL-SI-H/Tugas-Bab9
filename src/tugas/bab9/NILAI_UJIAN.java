@@ -40,6 +40,22 @@ package Laporan;
          this.add(cbMatkomlan).setBounds(250, 40, 80, 20);
          cbProbstat = new Checkbox("Probstat", cbg, false);
          this.add(cbProbstat).setBounds(400, 40, 70, 20);
+         
+           lbTugas = new Label("Tugas : ");
+         add(lbTugas);
+         lbTugas.setBounds(100, 70, 62, 20);
+         lbKuis = new Label("Kuis : ");
+         add(lbKuis);
+         lbKuis.setBounds(100, 100, 70, 20);
+         lbUTS = new Label("UTS : ");
+         add(lbUTS);
+         lbUTS.setBounds(100, 130, 70, 20);
+         lbUAS = new Label("UAS : ");
+         add(lbUAS);
+         lbUAS.setBounds(100, 160, 70, 20);
+         lbHasil = new Label("Hasil : ");
+         add(lbHasil);
+         lbHasil.setBounds(100, 190, 70, 20);
      }
  }
 
