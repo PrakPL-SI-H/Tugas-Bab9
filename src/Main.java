@@ -8,10 +8,10 @@ public class Main {
 
         FrameProgram tampilanLayer = new FrameProgram();
         
-        tampilanLayer.setTitle("PROGRAM PENGHITUNGAN NILAI AKHIR");
-        tampilanLayer.setSize(410, 495);
+        tampilanLayer.setTitle("PROGRAM PENGHITUNGAN NILAI AKHIR"); //judul pada layer
+        tampilanLayer.setSize(410, 495); //ukuran layer
         tampilanLayer.show();
-        tampilanLayer.setBackground(new Color(51,255,0));
+        tampilanLayer.setBackground(new Color(51,255,0));//atur warna background layer
 
     }
 
