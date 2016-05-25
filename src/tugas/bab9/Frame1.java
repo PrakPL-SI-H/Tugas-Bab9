@@ -1,3 +1,7 @@
+//Nama : Felix Yosa H. S.
+//NIM : 155150400111129
+//Kelas : SI-H
+
 package tugasgui;
 
 import java.awt.*;
@@ -120,13 +124,13 @@ public class Frame1 extends JFrame {
                     hASD = String.valueOf(tugas * 0.1 + kuis * 0.2 + UTS * 0.3 + UAS * 0.4);
                     txtHasil.setText(hASD);
                 } else if (cbMatkomlan.isSelected()) {
-                    hMatkomlan = String.valueOf(tugas * 0.1 + kuis * 0.2 + UTS * 0.3 + UAS * 0.4);
+                    hMatkomlan = String.valueOf(tugas * 0.1 + kuis * 0.1 + UTS * 0.4 + UAS * 0.4);
                     txtHasil.setText(hMatkomlan);
                 } else if (cbPemlan.isSelected()) {
-                    hPemlan = String.valueOf(tugas * 0.1 + kuis * 0.2 + UTS * 0.3 + UAS * 0.4);
+                    hPemlan = String.valueOf(tugas * 0.2 + kuis * 0.2 + UTS * 0.2 + UAS * 0.4);
                     txtHasil.setText(hPemlan);
                 } else if (cbProbstat.isSelected()) {
-                    hProbstat = String.valueOf(tugas * 0.1 + kuis * 0.2 + UTS * 0.3 + UAS * 0.4);
+                    hProbstat = String.valueOf(tugas * 0.2 + kuis * 0.2 + UTS * 0.3 + UAS * 0.3);
                     txtHasil.setText(hProbstat);
                 }
             }
