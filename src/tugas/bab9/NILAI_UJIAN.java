@@ -31,5 +31,16 @@ package Laporan;
          lbJudul.setFont(new Font("Arial", 1, 14));
          add(lbJudul);
          lbJudul.setBounds(150, 20, 170, 20);
+         cbg = new CheckboxGroup();
+         cbASD = new Checkbox("ASD", cbg, false);
+         this.add(cbASD).setBounds(10, 40, 70, 20);
+         cbPemlan = new Checkbox("Pemlan", cbg, false);
+         this.add(cbPemlan).setBounds(120, 40, 70, 20);
+         cbMatkomlan = new Checkbox("Matkomlan", cbg, false);
+         this.add(cbMatkomlan).setBounds(250, 40, 80, 20);
+         cbProbstat = new Checkbox("Probstat", cbg, false);
+         this.add(cbProbstat).setBounds(400, 40, 70, 20);
      }
  }
+
+
