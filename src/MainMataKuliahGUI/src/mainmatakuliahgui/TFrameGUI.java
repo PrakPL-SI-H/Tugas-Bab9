@@ -1,14 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package mainmatakuliahgui;
 
-/**
- *
- * @author ASUS-A455L
- */
+import java.awt.*;
+
 public class TFrameGUI {
+
+    Label lbJudul, lbTugas, lbKuis, lbUTS, lbUAS, lbHasil;
+    TextField txtTugas, txtKuis, txtUTS, txtUAS, txtHasil;
+    CheckboxGroup cbg;
+    Checkbox cbNilaiAngka, cbNilaiHuruf, cbASD, cbProbstat, cbProglan, cbMatkomlan;
+    Button btnHasil, btnTampil;
+    TextArea txtArea;
+    
+    
+    
     
 }
