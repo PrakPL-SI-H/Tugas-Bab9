@@ -17,6 +17,8 @@ public class Bab9 {
         GUI window = new GUI();
         window.setTitle("Nilai");
         window.setSize(370, 500);
+        window.setBackground(Color.orange);
+        window.setForeground(Color.white);
         window.show();
     }    
 }
