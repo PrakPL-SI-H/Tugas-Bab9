@@ -93,6 +93,7 @@ public class TFrameGUI extends Frame {
 
     class main implements ItemListener {
 
+        @Override
         public void itemStateChanged(ItemEvent e) {
             Object source = e.getItemSelectable();
 
@@ -148,6 +149,7 @@ public class TFrameGUI extends Frame {
 
     class mainAction implements ActionListener {
 
+        @Override
         public void actionPerformed(ActionEvent event) {
             String[][] a = new String[4][2];
             int tugas = Integer.parseInt(txtTugas.getText().trim());
@@ -178,6 +180,24 @@ public class TFrameGUI extends Frame {
         }
 
     }
-    
-    
+
+    class mainAction1 implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent event) {
+            mainAction a = new mainAction();
+            String hasil = "";
+            for (int i = 0; i < 4; i++) {
+                for (int j = 0; j < 2; j++) {
+                    hasil += output[i][j];
+                    if (j == 0) {
+                        hasil += " : ";
+                    }
+                }
+                hasil += "\n";
+            }
+            txtArea.setText(hasil);
+        }
+    }
+
 }
