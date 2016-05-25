@@ -121,16 +121,24 @@ public class Frame1 extends JFrame {
             //jika klik hitung
             if (e.getSource() == btnHitung) {
                 if (cbASD.isSelected()) {
-                    hASD = String.valueOf(tugas * 0.1 + kuis * 0.2 + UTS * 0.3 + UAS * 0.4);
+                    ASD asd = new ASD();
+                    asd.setHasil(tugas, kuis, UTS, UAS);
+                    hASD = String.valueOf(asd.getHasil());
                     txtHasil.setText(hASD);
                 } else if (cbMatkomlan.isSelected()) {
-                    hMatkomlan = String.valueOf(tugas * 0.1 + kuis * 0.1 + UTS * 0.4 + UAS * 0.4);
+                    Matkomlan matkomlan = new Matkomlan();
+                    matkomlan.setHasil(tugas, kuis, UTS, UAS);
+                    hMatkomlan = String.valueOf(matkomlan.getHasil());
                     txtHasil.setText(hMatkomlan);
                 } else if (cbPemlan.isSelected()) {
-                    hPemlan = String.valueOf(tugas * 0.2 + kuis * 0.2 + UTS * 0.2 + UAS * 0.4);
+                    Pemlan pemlan = new Pemlan();
+                    pemlan.setHasil(tugas, kuis, UTS, UAS);
+                    hPemlan = String.valueOf(pemlan.getHasil());
                     txtHasil.setText(hPemlan);
                 } else if (cbProbstat.isSelected()) {
-                    hProbstat = String.valueOf(tugas * 0.2 + kuis * 0.2 + UTS * 0.3 + UAS * 0.3);
+                    Probstat probstat = new Probstat();
+                    probstat.setHasil(tugas, kuis, UTS, UAS);
+                    hProbstat = String.valueOf(probstat.getHasil());
                     txtHasil.setText(hProbstat);
                 }
             }
