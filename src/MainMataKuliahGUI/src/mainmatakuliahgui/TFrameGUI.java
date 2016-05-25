@@ -30,6 +30,24 @@ public class TFrameGUI extends Frame {
         cbMatkomlan = new Checkbox("Matkomlan", cbg, false);
         this.add(cbMatkomlan).setBounds(300, 50, 90, 20);
 
+        lbTugas = new Label("Tugas : ");
+        add(lbTugas);
+        lbTugas.setBounds(100, 80, 62, 20);
+
+        lbKuis = new Label("Kuis : ");
+        add(lbKuis);
+        lbKuis.setBounds(100, 110, 70, 20);
+
+        lbUTS = new Label("UTS : ");
+        add(lbUTS);
+        lbUTS.setBounds(100, 140, 70, 20);
+
+        lbUAS = new Label("UAS : ");
+        add(lbUAS);
+        lbUAS.setBounds(100, 170, 70, 20);
+        
+        
+
     }
 
 }
