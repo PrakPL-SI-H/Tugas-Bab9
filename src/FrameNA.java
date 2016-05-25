@@ -115,6 +115,22 @@ public class FrameNA extends Frame {
             int kuis = Integer.parseInt(txtKuis.getText().trim());
             int UTS = Integer.parseInt(txtUTS.getText().trim());
             int UAS = Integer.parseInt(txtUAS.getText().trim());
+
+            if (ae.getSource() == btnHitung) {
+                if (rbASD.isSelected()) {
+                    asd = String.valueOf((tugas + kuis + UTS + UAS) / 4);
+                    txtHasil.setText(asd);
+                } else if (rbPemlan.isSelected()) {
+                    pemlan = String.valueOf((tugas * 0.1) + (kuis * 0.3) + (UTS * 0.3) + (UAS * 0.3));
+                    txtHasil.setText(pemlan);
+                } else if (rbMatkomlan.isSelected()) {
+                    matkomlan = String.valueOf((tugas * 0.1) + (kuis * 0.2) + (UTS * 0.3) + (UAS * 0.4));
+                    txtHasil.setText(matkomlan);
+                } else if (rbProbstat.isSelected()) {
+                    probstat = String.valueOf((tugas * 0.3) + (kuis * 0.2) + (UTS * 0.25) + (UAS * 0.25));
+                    txtHasil.setText(probstat);
+                }
+            }
         }
     }
 }
