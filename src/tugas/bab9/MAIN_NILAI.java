@@ -12,6 +12,10 @@ package Laporan;
  public class MAIN_NILAI {
  
      public static void main(String[] args) {
-         
+         NILAI_UJIAN gui = new NILAI_UJIAN();
+         gui.setTitle("Hitung Nilai Akhir dengan GUI java.awt");
+         gui.setSize(500, 650);
+         gui.show(); 
      }
  }
+
