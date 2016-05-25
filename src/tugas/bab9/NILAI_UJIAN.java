@@ -24,4 +24,12 @@ package Laporan;
      Button btnHasil, btnHasilTotal;
      public String hasilASD = "0.0", hasilPemlan = "0.0", hasilMatkomlan = "0.0", hasilProbstat = "0.0";
  
+     
+     public NILAI_UJIAN() {
+         setLayout(null);
+         lbJudul = new Label("Hitung Nilai Akhir");
+         lbJudul.setFont(new Font("Arial", 1, 14));
+         add(lbJudul);
+         lbJudul.setBounds(150, 20, 170, 20);
+     }
  }
