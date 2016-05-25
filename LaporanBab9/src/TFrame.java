@@ -1,13 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author asus
- */
-public class TFrame {
-    
+import java.awt.*;
+import java.awt.event.*;
+public class TFrame extends Frame{
+    public Label lbJudul, lbTugas, lbKuis, lbUTS, lbUAS, lbHasil;
+    public TextField txtTugas, txtKuis, txtUTS, txtUAS, txtHasil;
+    public TextArea txtHasilSemua;
+    public Checkbox varASD, varPemlan, varMatkomlan, varProbstat;
+    CheckboxGroup matkul = new CheckboxGroup();
+    Button hasil, hasilSemua;
 }
