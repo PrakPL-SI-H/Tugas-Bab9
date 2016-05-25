@@ -84,5 +84,25 @@ public class Frame1 extends JFrame {
         add(txtHasil);
         txtHasil.setBounds(200, 230, 60, 20);
 
+        //membuat button hitung
+        btnHitung = new Button("Hitung");
+        add(btnHitung);
+        btnHitung.setBounds(130, 270, 100, 20);
+        btnHitung.addActionListener(new KlikHitung());
         
+        //membuat textarea
+        txaHasil = new TextArea();
+        add(txaHasil);
+        txaHasil.setBounds(30, 310, 300, 150);
+        
+        //membuat button untuk hasil
+        btnHasil = new Button("Tampilkan nilai semua matkul");
+        add(btnHasil);
+        btnHasil.setBounds(60, 470, 234, 20);
+        btnHasil.addActionListener(new KlikHitung());
+        
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+    }
+
+    
 }
