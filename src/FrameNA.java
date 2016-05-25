@@ -44,5 +44,21 @@ public class FrameNA extends Frame {
         rbg.add(rbPemlan);
         rbg.add(rbMatkomlan);
         rbg.add(rbProbstat);
+
+        lbTugas = new Label("Tugas : ");
+        add(lbTugas);
+        lbTugas.setBounds(100, 90, 50, 20);
+        lbKuis = new Label("Kuis : ");
+        add(lbKuis);
+        lbKuis.setBounds(100, 120, 50, 20);
+        lbUTS = new Label("UTS : ");
+        add(lbUTS);
+        lbUTS.setBounds(100, 150, 50, 20);
+        lbUAS = new Label("UAS : ");
+        add(lbUAS);
+        lbUAS.setBounds(100, 180, 50, 20);
+        lbHasil = new Label("Hasil : ");
+        add(lbHasil);
+        lbHasil.setBounds(100, 210, 50, 20);
     }
 }
