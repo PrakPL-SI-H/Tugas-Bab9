@@ -108,7 +108,20 @@ public class TFrameGUI extends Frame {
                 String hasil = String.valueOf((tugas + kuis + UTS + UAS) / 5);
                 txtHasil.setText(hasil);
 
+            } else if (source == cbProbstat) {
+                txtTugas.setText("0");
+                txtKuis.setText("0");
+                txtUTS.setText("0");
+                txtUAS.setText("0");
+                int tugas = Integer.parseInt(txtTugas.getText().trim());
+                int kuis = Integer.parseInt(txtKuis.getText().trim());
+                int UTS = Integer.parseInt(txtUTS.getText().trim());
+                int UAS = Integer.parseInt(txtUAS.getText().trim());
+                String hasil = String.valueOf(tugas / 3 + kuis / 3 + UTS / 3 + UAS / 3);
+                txtHasil.setText(hasil);
             }
 
+            
         }
     }
+}
