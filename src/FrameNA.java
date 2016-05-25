@@ -28,5 +28,21 @@ public class FrameNA extends Frame {
         lbJudul.setFont(new Font("Arial", 1, 14));
         add(lbJudul);
         lbJudul.setBounds(100, 30, 170, 20);
+
+        rbg = new ButtonGroup();
+
+        rbASD = new JRadioButton("ASD", false);
+        this.add(rbASD).setBounds(30, 60, 50, 20);
+        rbPemlan = new JRadioButton("Pemlan", false);
+        this.add(rbPemlan).setBounds(80, 60, 70, 20);
+        rbMatkomlan = new JRadioButton("Matkomlan", false);
+        this.add(rbMatkomlan).setBounds(150, 60, 90, 20);
+        rbProbstat = new JRadioButton("Probstat", false);
+        this.add(rbProbstat).setBounds(240, 60, 80, 20);
+
+        rbg.add(rbASD);
+        rbg.add(rbPemlan);
+        rbg.add(rbMatkomlan);
+        rbg.add(rbProbstat);
     }
 }
