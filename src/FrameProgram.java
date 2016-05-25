@@ -15,5 +15,33 @@ public class FrameProgram extends Frame { //pemanggilan data di parent default d
     JRadioButton cbgASD,cbgProbstat,cbgProglan,cbgMatkomlan;//pembuatan button dengan JRadioButton
     Button btnTampil, btnHasil;
 
+    public FrameProgram() {
+        setLayout(null);//agar dapat meng-set letak secara bebas di set null
+        lbJudul = new Label("NILAI AKHIR MAHASISWA");
+        lbJudul.setFont(new Font("Verdana", Font.BOLD, 14));
+        lbJudul.setForeground(Color.BLUE);
+        add(lbJudul);
+        lbJudul.setBounds(125, 30, 175, 20);
+        centang = new CheckboxGroup();
+        cbgASD = new JRadioButton("ASD", false);
+        cbASD = new Checkbox("ASD",centang, false);
+        this.add(cbASD).setBounds(300, 50, 80, 20);
+        cbASD.addItemListener(new main());
+        cbgProbstat = new JRadioButton("Probstat", false);
+        cbProbstat = new Checkbox("Probstat",centang, false);
+        this.add(cbProbstat).setBounds(20, 50, 90, 20);
+        cbProbstat.addItemListener(new main());
+        cbgProglan = new JRadioButton("Proglan", false);
+        cbProglan = new Checkbox("Proglan",centang, false);
+        this.add(cbProglan).setBounds(200, 50, 90, 20);
+        cbProglan.addItemListener(new main());
+        cbgMatkomlan = new JRadioButton("Matkomlan", false);
+        cbMatkomlan = new Checkbox("Matkomlan",centang, false);
+        this.add(cbMatkomlan).setBounds(110, 50, 90, 20);
+        cbMatkomlan.addItemListener(new main());
+
+    }
+
+    
 
 }
