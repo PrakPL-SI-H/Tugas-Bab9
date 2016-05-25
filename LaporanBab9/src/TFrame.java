@@ -51,7 +51,7 @@ public class TFrame extends Frame{
 
         hasil = new Button("Hitung");
         add(hasil).setBounds(185, 260, 100, 20);
-        hasil.addActionListener(null);
+        hasil.addActionListener(new mainActionHasil());
         txtHasilSemua = new TextArea();
         add(txtHasilSemua).setBounds(50, 290, 400, 200);
         hasilSemua = new Button("Tampilkan Nilai Semua Mata Kuliah");
@@ -75,6 +75,28 @@ public class TFrame extends Frame{
                 pilihan = 3;
             } else if (source == varProbstat) {
                 pilihan = 4;
+            }
+        }
+    }
+    class mainActionHasil implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent event) {
+            double tugas = Double.parseDouble(txtTugas.getText().trim());
+            double kuis = Double.parseDouble(txtKuis.getText().trim());
+            double UTS = Double.parseDouble(txtUTS.getText().trim());
+            double UAS = Double.parseDouble(txtUAS.getText().trim());
+            if (pilihan == 1) {
+                Pemlan obPemlan = new Pemlan(tugas, kuis, UTS, UAS);
+                txtHasil.setText(obPemlan.getHasil());
+            } else if (pilihan == 2) {
+                ASD obASD = new ASD(tugas, kuis, UTS, UAS);
+                txtHasil.setText(obASD.getHasil());
+            } else if (pilihan == 3) {
+                Matkomlan obMatkomlan = new Matkomlan(tugas, kuis, UTS, UAS);
+                txtHasil.setText(obMatkomlan.getHasil());
+            } else if (pilihan == 4) {
+                Probstat obProbstat = new Probstat(tugas, kuis, UTS, UAS);
+                txtHasil.setText(obProbstat.getHasil());
             }
         }
     }
