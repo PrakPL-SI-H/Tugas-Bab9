@@ -159,9 +159,29 @@ public class FrameProgram extends Frame { //pemanggilan data di parent default d
             
             String hasil = "";
             
-            
-    }
+            Object pilCheck = centang.getSelectedCheckbox();
+            if (pilCheck == cbProbstat) {
+                output[1][0] = "Probstat        ";
+                hasil = String.valueOf((tugas + kuis + UTS + UAS) / 1);
+                output[1][1] = hasil;
+            } else if (pilCheck == cbMatkomlan) {
+                
+                output[0][0] = "HASIL SEMUA NILAI MATA KULIAH :\n"
+                        + "Matkomlan   ";
+                hasil = String.valueOf((tugas + kuis + UTS + UAS) / 2);
+                output[0][1] = hasil;
+            } else if (pilCheck == cbASD) {
+                output[3][0] = "ASD               ";
+                hasil = String.valueOf((tugas + kuis + UTS + UAS) / 3);
+                output[3][1] = hasil;
+            } else if (pilCheck == cbProglan) {
+                output[2][0] = "Pemlan         ";
+                hasil = String.valueOf((tugas + kuis + UTS + UAS) / 4);
+                output[2][1] = hasil;
+            }
+            txtHasil.setText(hasil);
+        }
 
-    
+    }
 
 }
