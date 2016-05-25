@@ -184,4 +184,25 @@ public class FrameProgram extends Frame { //pemanggilan data di parent default d
 
     }
 
+    class mainActionTampil implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent event) {
+            String hasil = "";
+            mainAction a = new mainAction();
+
+            for (int i = 0; i < 4; i++) {
+                for (int j = 0; j < 2; j++) {
+                    hasil += output[i][j];
+                    if (j == 0) {
+                        
+                        hasil += " Dengan Nilai : ";
+                    }
+                }
+                hasil += "\n";
+            }
+            txtArea.setText(hasil);
+        }
+    }
+
 }
