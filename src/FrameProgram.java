@@ -148,8 +148,20 @@ public class FrameProgram extends Frame { //pemanggilan data di parent default d
 
     class mainAction implements ActionListener {
 
-
+        @Override
+        public void actionPerformed(ActionEvent event) {
+            int tugas,UTS,UAS,kuis;
+            String[][] a = new String[4][2];
+            tugas = Integer.parseInt(txtTugas.getText().trim());
+            UTS = Integer.parseInt(txtUTS.getText().trim());
+            UAS = Integer.parseInt(txtUAS.getText().trim());
+            kuis = Integer.parseInt(txtKuis.getText().trim());
+            
+            String hasil = "";
+            
+            
     }
 
     
+
 }
