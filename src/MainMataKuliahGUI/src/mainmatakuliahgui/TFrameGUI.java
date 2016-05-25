@@ -146,5 +146,17 @@ public class TFrameGUI extends Frame {
         }
     }
 
-    
+    class mainAction implements ActionListener {
+
+        public void actionPerformed(ActionEvent event) {
+            String[][] a = new String[4][2];
+            int tugas = Integer.parseInt(txtTugas.getText().trim());
+            int kuis = Integer.parseInt(txtKuis.getText().trim());
+            int UTS = Integer.parseInt(txtUTS.getText().trim());
+            int UAS = Integer.parseInt(txtUAS.getText().trim());
+            String hasil = "";
+
+            
+        }
+    }
 }
