@@ -7,6 +7,7 @@ public class TFrame extends Frame{
     public Checkbox varASD, varPemlan, varMatkomlan, varProbstat;
     CheckboxGroup matkul = new CheckboxGroup();
     Button hasil, hasilSemua;
+    int pilihan;
     
      public TFrame() {
         setLayout(null);
@@ -16,16 +17,16 @@ public class TFrame extends Frame{
         lbJudul.setBounds(160, 50, 170, 20);
         varPemlan = new Checkbox("Pem. Lanjut", matkul, false);
         add(varPemlan).setBounds(70, 80, 90, 20);
-        varPemlan.addItemListener(null);
+        varPemlan.addItemListener(new mainAction());
         varASD = new Checkbox("ASD", matkul, false);
         add(varASD).setBounds(170, 80, 90, 20);
-        varASD.addItemListener(null);
+        varASD.addItemListener(new mainAction());
         varMatkomlan = new Checkbox("Matkomlan", matkul, false);
         add(varMatkomlan).setBounds(270, 80, 90, 20);
-        varMatkomlan.addItemListener(null);
+        varMatkomlan.addItemListener(new mainAction());
         varProbstat = new Checkbox("Probstat", matkul, false);
         add(varProbstat).setBounds(370, 80, 90, 20);
-        varProbstat.addItemListener(null);
+        varProbstat.addItemListener(new mainAction());
 
         lbTugas = new Label("Tugas\t: ");
         add(lbTugas).setBounds(160, 110, 70, 20);
@@ -56,6 +57,26 @@ public class TFrame extends Frame{
         hasilSemua = new Button("Tampilkan Nilai Semua Mata Kuliah");
         add(hasilSemua).setBounds(50, 500, 400, 20);
         hasilSemua.addActionListener(null);
+    }
+    class mainAction implements ItemListener {
+        @Override
+        public void itemStateChanged(ItemEvent event) {
+            txtTugas.setText("0");
+            txtKuis.setText("0");
+            txtUTS.setText("0");
+            txtUAS.setText("0");
+            txtHasil.setText("0");
+            Object source = event.getItemSelectable();
+            if (source == varPemlan) {
+                pilihan = 1;
+            } else if (source == varASD) {
+                pilihan = 2;
+            } else if (source == varMatkomlan) {
+                pilihan = 3;
+            } else if (source == varProbstat) {
+                pilihan = 4;
+            }
+        }
     }
 
 }
