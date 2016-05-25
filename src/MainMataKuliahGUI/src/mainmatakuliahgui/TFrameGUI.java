@@ -165,7 +165,19 @@ public class TFrameGUI extends Frame {
                 output[1][0] = "Pemlan";
                 hasil = String.valueOf(tugas / 5 + kuis / 5 + UTS / 5 + UAS / 5);
                 output[1][1] = hasil;
-            } 
+            } else if (source == cbProbstat) {
+                output[2][0] = "Probstat";
+                hasil = String.valueOf(tugas / 3 + kuis / 3 + UTS / 3 + UAS / 3);
+                output[2][1] = hasil;
+            } else if (source == cbMatkomlan) {
+                output[3][0] = "Matkomlan";
+                hasil = String.valueOf((tugas + kuis + UTS + UAS) / 4);
+                output[3][1] = hasil;
+            }
+            txtHasil.setText(hasil);
         }
+
     }
+    
+    
 }
