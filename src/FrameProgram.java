@@ -108,8 +108,42 @@ public class FrameProgram extends Frame { //pemanggilan data di parent default d
                 String hasil = String.valueOf((tugas + kuis + UTS + UAS) / 3);
                 txtHasil.setText(hasil);
 
+            } else if (pilCheck == cbProbstat) {
+                txtTugas.setText("0");
+                tugas = Integer.parseInt(txtTugas.getText().trim());
+                txtKuis.setText("0");
+                kuis = Integer.parseInt(txtKuis.getText().trim());
+                txtUTS.setText("0");
+                UTS = Integer.parseInt(txtUTS.getText().trim());
+                txtUAS.setText("0");
+                UAS = Integer.parseInt(txtUAS.getText().trim());
+                String hasil = String.valueOf((tugas  + kuis  + UTS  + UAS) / 1);
+                txtHasil.setText(hasil);
+            } else if (pilCheck == cbProglan) {
+                txtTugas.setText("0");
+                tugas = Integer.parseInt(txtTugas.getText().trim());
+                txtKuis.setText("0");
+                kuis = Integer.parseInt(txtKuis.getText().trim());
+                txtUTS.setText("0");
+                UTS = Integer.parseInt(txtUTS.getText().trim());
+                txtUAS.setText("0");
+                UAS = Integer.parseInt(txtUAS.getText().trim());
+                String hasil = String.valueOf((tugas  + kuis  + UTS  + UAS) / 4);
+                txtHasil.setText(hasil);
+            } else if (pilCheck == cbMatkomlan) {
+                txtTugas.setText("0");
+                tugas = Integer.parseInt(txtTugas.getText().trim());
+                txtKuis.setText("0");
+                kuis = Integer.parseInt(txtKuis.getText().trim());
+                txtUTS.setText("0");
+                UTS = Integer.parseInt(txtUTS.getText().trim());
+                txtUAS.setText("0");
+                UAS = Integer.parseInt(txtUAS.getText().trim());
+                String hasil = String.valueOf((tugas + kuis + UTS + UAS) / 2);
+                txtHasil.setText(hasil);
             }
-    }
 
+        }
+    }
 
 }
