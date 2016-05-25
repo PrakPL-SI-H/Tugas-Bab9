@@ -56,7 +56,7 @@ public class TFrame extends Frame{
         add(txtHasilSemua).setBounds(50, 290, 400, 200);
         hasilSemua = new Button("Tampilkan Nilai Semua Mata Kuliah");
         add(hasilSemua).setBounds(50, 500, 400, 20);
-        hasilSemua.addActionListener(null);
+        hasilSemua.addActionListener(new mainActionLast());
     }
     class mainAction implements ItemListener {
         @Override
@@ -98,6 +98,20 @@ public class TFrame extends Frame{
                 Probstat obProbstat = new Probstat(tugas, kuis, UTS, UAS);
                 txtHasil.setText(obProbstat.getHasil());
             }
+        }
+    }
+    class mainActionLast implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent event) {
+            Pemlan pl = new Pemlan();
+            Matkomlan ml = new Matkomlan();
+            ASD asd = new ASD();
+            Probstat ps = new Probstat();
+            txtHasilSemua.setText("\t\tHasil Nilai Semua Mata Kuliah\n"
+                    + "\nPemrograman Dasar\t\t: " + pl.getHasil()
+                    + "\nASD\t\t\t\t: " + asd.getHasil()
+                    + "\nMatematika Komputasi Lanjut\t: " + ml.getHasil()
+                    + "\nProbabilitas dan Statistika\t\t: " + ps.getHasil());
         }
     }
 
