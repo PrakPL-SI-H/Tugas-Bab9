@@ -93,6 +93,47 @@ public class TFrame extends Frame{
         this.add(cbMatkomlan).setBounds(220, 80, 75, 20);
         cbProbstat = new Checkbox("Probstat", cbg, false);
         add(cbProbstat).setBounds(300, 80, 75, 20);
-    
     }
+        
+        class mainAction implements ActionListener, ItemListener {         
+            @Override
+            public void actionPerformed(ActionEvent e) {             
+                int a = Integer.parseInt(txtTugas.getText().trim());
+                int b = Integer.parseInt(txtKuis.getText().trim());
+                int c = Integer.parseInt(txtUTS.getText().trim());
+                int d = Integer.parseInt(txtUAS.getText().trim());
+                if(e.getSource() == btnHitung){
+                    
+                    Object source = cbg.getSelectedCheckbox();
+                    
+                    if(source == cbASD){
+                        asd = String.valueOf((a * 0.25)+(b * 0.25)+(c * 0.2)+(d * 0.3));
+                        txtHasil.setText(asd);
+                    }
+                    else if(source == cbPemlan){
+                        pemlan = String.valueOf((a * 0.2)+(b * 0.2)+(c * 0.3)+(d * 0.3));
+                        txtHasil.setText(pemlan);
+                    }
+                    else if(source == cbMatkomlan){
+                        matkomlan = String.valueOf((a * 0.15)+(b * 0.25)+(c * 0.3)+(d * 0.3));
+                        txtHasil.setText(matkomlan);
+                    }
+                    else if(source == cbProbstat){
+                        probstat = String.valueOf((a + b + c + d) / 4);
+                        txtHasil.setText(probstat);
+                    }
+                }
+                if (e.getSource() == btnSemua){
+                    txtSemua.setText("\tHASIL NILAI SEMUA MATA KULIAH\n\n"
+                            + "Algoritma dan Struktur Data\t: "+asd+"\n"
+                            + "Pemograman Lanjut\t\t: "+pemlan+"\n"
+                            + "Matematika Komputasi Lanjut\t: "+matkomlan+"\n"
+                            + "Probabilitas Statistik\t\t: "+probstat);   
+                    }
+                }
+            
+        @Override
+        public void itemStateChanged(ItemEvent ie) {
+        }
+        }
 }
