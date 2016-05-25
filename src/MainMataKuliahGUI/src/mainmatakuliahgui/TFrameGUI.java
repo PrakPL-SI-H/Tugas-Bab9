@@ -45,9 +45,37 @@ public class TFrameGUI extends Frame {
         lbUAS = new Label("UAS : ");
         add(lbUAS);
         lbUAS.setBounds(100, 170, 70, 20);
-        
-        
 
+        lbHasil = new Label("Hasil : ");
+        add(lbHasil);
+        lbHasil.setBounds(100, 200, 70, 20);
+
+        txtTugas = new TextField("0");
+        add(txtTugas);
+        txtTugas.setBounds(200, 80, 60, 20);
+
+        txtKuis = new TextField("0");
+        add(txtKuis);
+        txtKuis.setBounds(200, 110, 60, 20);
+
+        txtUTS = new TextField("0");
+        add(txtUTS);
+        txtUTS.setBounds(200, 140, 60, 20);
+
+        txtUAS = new TextField("0");
+        add(txtUAS);
+        txtUAS.setBounds(200, 170, 60, 20);
+
+        txtHasil = new TextField("0");
+        add(txtHasil);
+        txtHasil.setBounds(200, 200, 60, 20);
+
+        btnHasil = new Button("Hitung");
+        add(btnHasil);
+        btnHasil.setBounds(120, 240, 100, 20);
+
+        
+        
     }
 
 }
