@@ -60,5 +60,21 @@ public class FrameNA extends Frame {
         lbHasil = new Label("Hasil : ");
         add(lbHasil);
         lbHasil.setBounds(100, 210, 50, 20);
+
+        txtTugas = new TextField("0");
+        add(txtTugas);
+        txtTugas.setBounds(170, 90, 60, 20);
+        txtKuis = new TextField("0");
+        add(txtKuis);
+        txtKuis.setBounds(170, 120, 60, 20);
+        txtUTS = new TextField("0");
+        add(txtUTS);
+        txtUTS.setBounds(170, 150, 60, 20);
+        txtUAS = new TextField("0");
+        add(txtUAS);
+        txtUAS.setBounds(170, 180, 60, 20);
+        txtHasil = new TextField("0");
+        add(txtHasil);
+        txtHasil.setBounds(170, 210, 60, 20);
     }
 }
