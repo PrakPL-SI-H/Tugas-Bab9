@@ -76,5 +76,17 @@ public class FrameNA extends Frame {
         txtHasil = new TextField("0");
         add(txtHasil);
         txtHasil.setBounds(170, 210, 60, 20);
+
+        btnHitung = new Button("Hitung");
+        add(btnHitung);
+        btnHitung.setBounds(130, 240, 100, 20);
+
+        taNilai = new TextArea();
+        add(taNilai);
+        taNilai.setBounds(70, 270, 220, 130);
+
+        btnTampil = new Button("Tampilkan Semua Nilai Matkul");
+        add(btnTampil);
+        btnTampil.setBounds(70, 410, 220, 20);
     }
 }
