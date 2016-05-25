@@ -25,5 +25,22 @@ public class Frame1 extends JFrame {
         add(lbJudul);
         lbJudul.setBounds(100, 30, 170, 20);
 
+        //membuat checkbox
+        cbASD = new JRadioButton("ASD", false);
+        this.add(cbASD).setBounds(20, 70, 50, 20);
+        cbPemlan = new JRadioButton("Pemlan",false);
+        this.add(cbPemlan).setBounds(80, 70, 70, 20);
+        cbMatkomlan = new JRadioButton("Matkomlan",false);
+        this.add(cbMatkomlan).setBounds(160, 70, 90, 20);
+        cbProbstat = new JRadioButton("Probstat",  false);
+        this.add(cbProbstat).setBounds(260, 70, 90, 20);
+        
+        //membuat group untuk checkbox
+        cbg = new ButtonGroup();
+        cbg.add(cbASD);
+        cbg.add(cbPemlan);
+        cbg.add(cbMatkomlan);
+        cbg.add(cbProbstat);
+
         
 }
