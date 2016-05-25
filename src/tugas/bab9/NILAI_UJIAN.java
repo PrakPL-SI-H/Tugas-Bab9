@@ -56,7 +56,22 @@ package Laporan;
          lbHasil = new Label("Hasil : ");
          add(lbHasil);
          lbHasil.setBounds(100, 190, 70, 20);
+         
+         txtTugas = new TextField("0");
+         add(txtTugas);
+         txtTugas.setBounds(200, 70, 60, 20);
+         txtKuis = new TextField("0");
+         add(txtKuis);
+         txtKuis.setBounds(200, 100, 60, 20);
+         txtUTS = new TextField("0");
+         add(txtUTS);
+         txtUTS.setBounds(200, 130, 60, 20);
+         txtUAS = new TextField("0");
+         add(txtUAS);
+         txtUAS.setBounds(200, 160, 60, 20);
+         txtHasil = new TextField("0");
+         add(txtHasil);
+         txtHasil.setBounds(200, 190, 60, 20);
      }
  }
-
 
