@@ -104,6 +104,44 @@ public class Frame1 extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
+    class KlikHitung implements ActionListener {
+        
+        @Override
+        public void actionPerformed(ActionEvent e) {
+
+            double tugas = Double.parseDouble(txtTugas.getText().trim());
+            double kuis = Double.parseDouble(txtKuis.getText().trim());
+            double UTS = Double.parseDouble(txtUTS.getText().trim());
+            double UAS = Double.parseDouble(txtUAS.getText().trim());
+
+            //jika klik hitung
+            if (e.getSource() == btnHitung) {
+                if (cbASD.isSelected()) {
+                    hASD = String.valueOf(tugas * 0.1 + kuis * 0.2 + UTS * 0.3 + UAS * 0.4);
+                    txtHasil.setText(hASD);
+                } else if (cbMatkomlan.isSelected()) {
+                    hMatkomlan = String.valueOf(tugas * 0.1 + kuis * 0.2 + UTS * 0.3 + UAS * 0.4);
+                    txtHasil.setText(hMatkomlan);
+                } else if (cbPemlan.isSelected()) {
+                    hPemlan = String.valueOf(tugas * 0.1 + kuis * 0.2 + UTS * 0.3 + UAS * 0.4);
+                    txtHasil.setText(hPemlan);
+                } else if (cbProbstat.isSelected()) {
+                    hProbstat = String.valueOf(tugas * 0.1 + kuis * 0.2 + UTS * 0.3 + UAS * 0.4);
+                    txtHasil.setText(hProbstat);
+                }
+            }
+
+            //jika klik tampilkan
+            if (e.getSource() == btnHasil) {
+                txaHasil.setText("NAMA : FELIX\n"
+                        + "HASIL SEMUA NILAI MATA KULIAH\n"
+                        + "\nPemlan \t\t: " + hPemlan 
+                        + "\nASD \t\t: " + hASD
+                        + "\nMatkomlan \t: " + hMatkomlan
+                        + "\nProbstat \t: " + hProbstat);
+            }
+        }
+    }
 
     class mainAction implements ItemListener {
 
