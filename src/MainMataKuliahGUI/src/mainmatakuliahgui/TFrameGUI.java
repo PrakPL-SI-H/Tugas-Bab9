@@ -130,8 +130,21 @@ public class TFrameGUI extends Frame {
                 int UAS = Integer.parseInt(txtUAS.getText().trim());
                 String hasil = String.valueOf(tugas / 5 + kuis / 5 + UTS / 5 + UAS / 5);
                 txtHasil.setText(hasil);
+            } else if (source == cbMatkomlan) {
+                txtTugas.setText("0");
+                txtKuis.setText("0");
+                txtUTS.setText("0");
+                txtUAS.setText("0");
+                int tugas = Integer.parseInt(txtTugas.getText().trim());
+                int kuis = Integer.parseInt(txtKuis.getText().trim());
+                int UTS = Integer.parseInt(txtUTS.getText().trim());
+                int UAS = Integer.parseInt(txtUAS.getText().trim());
+                String hasil = String.valueOf((tugas + kuis + UTS + UAS) / 4);
+                txtHasil.setText(hasil);
             }
 
         }
     }
+
+    
 }
