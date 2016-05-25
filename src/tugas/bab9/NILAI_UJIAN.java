@@ -72,6 +72,25 @@ package Laporan;
          txtHasil = new TextField("0");
          add(txtHasil);
          txtHasil.setBounds(200, 190, 60, 20);
+         
+         btnHasil = new Button("Hitung");
+         add(btnHasil);
+         btnHasil.setBounds(160, 220, 100, 20);
+ 
+ 
+         btnHasil.addActionListener(new Hitung());
+ 
+         hasiltotal = new TextArea();
+         this.add(hasiltotal).setBounds(70, 260, 300, 150);
+ 
+         btnHasilTotal = new Button("Tampilkan nilai semua matkul");
+         add(btnHasilTotal);
+         btnHasilTotal.setBounds(90, 430, 250, 20);
+ 
+         btnHasilTotal.addActionListener(new hasilSemua());
+         setDefaultCloseOperation(EXIT_ON_CLOSE);
+     
+         
      }
  }
 
