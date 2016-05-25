@@ -75,5 +75,24 @@ public class TFrame extends Frame{
         add(txtSemua);
         txtSemua.setBounds(50, 300, 300, 150);
         
+        btnHitung = new Button("HITUNG");
+        add(btnHitung);
+        btnHitung.setBounds(165, 270, 75, 20);
+        btnHitung.addActionListener(new mainAction());
+        btnSemua = new Button("Tampilkan Semua Nilai");
+        add(btnSemua);
+        btnSemua.setBounds(125, 460, 160, 20);
+        btnSemua.addActionListener(new mainAction());
+        
+        cbg = new CheckboxGroup();
+        cbASD = new Checkbox("ASD", cbg, false);
+        this.add(cbASD).setBounds(60, 80, 75, 20);
+        cbPemlan = new Checkbox("Pemlan", cbg, false);
+        this.add(cbPemlan).setBounds(140, 80, 75, 20);
+        cbMatkomlan= new Checkbox("Matkomlan", cbg, false);
+        this.add(cbMatkomlan).setBounds(220, 80, 75, 20);
+        cbProbstat = new Checkbox("Probstat", cbg, false);
+        add(cbProbstat).setBounds(300, 80, 75, 20);
+    
     }
 }
