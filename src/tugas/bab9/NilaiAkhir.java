@@ -7,188 +7,188 @@ import javax.swing.*;
 public class NilaiAkhir extends JFrame implements ActionListener {
 
     public JLabel judul, tugas, kuis, uts, uas, hasil;
-    public JTextField nilaitugas, nilaikuis, nilaiuts, nilaiuas, nilaihasil;
+    public JTextField nilaiTugas, nilaiKuis, nilaiUts, nilaiUas, nilaiHasil;
     public ButtonGroup bg;
-    public static int ntugas, nkuis, nuts, nuas;
-    public JButton hitung, tampilannilai;
+    public static int nTugas, nKuis, nUts, nUas;
+    public JButton hitung, tampilanNilai;
     public JTextArea tampilan;
-    public String nilaiasd, nilaipemlan, nilaimatkomlan, nilaiprobstat, nhasil;
-    public JRadioButton asd, pemlan, matkomlan, probstat;
+    public String nilaiAsd, nilaiPemlan, nilaiMatkomlan, nilaiProbstat, nHasil;
+    public JRadioButton Asd, Pemlan, Matkomlan, Probstat;
 
-    public void setjudul() {
+    public void setJudul() {
         judul = new JLabel("Hitung Nilai Akhir");
         add(judul);
         judul.setBounds(190, 20, 200, 20);
     }
 
-    public void setasd() {
-        asd = new JRadioButton("ASD");
-        add(asd);
-        asd.setBounds(40, 40, 100, 40);
-        asd.addActionListener(this);
+    public void setAsd() {
+        Asd = new JRadioButton("ASD");
+        add(Asd);
+        Asd.setBounds(40, 40, 100, 40);
+        Asd.addActionListener(this);
     }
 
-    public void setpemlan() {
-        pemlan = new JRadioButton("PEMLAN");
-        add(pemlan);
-        pemlan.setBounds(150, 40, 100, 40);
-        pemlan.addActionListener(this);
+    public void setPemlan() {
+        Pemlan = new JRadioButton("PEMLAN");
+        add(Pemlan);
+        Pemlan.setBounds(150, 40, 100, 40);
+        Pemlan.addActionListener(this);
     }
 
-    public void setmatkomlan() {
-        matkomlan = new JRadioButton("MATKOMLAN");
-        add(matkomlan);
-        matkomlan.setBounds(260, 40, 100, 40);
-        matkomlan.addActionListener(this);
+    public void setMatkomlan() {
+        Matkomlan = new JRadioButton("MATKOMLAN");
+        add(Matkomlan);
+        Matkomlan.setBounds(260, 40, 100, 40);
+        Matkomlan.addActionListener(this);
     }
 
-    public void setprobstat() {
-        probstat = new JRadioButton("PROBSTAT");
-        add(probstat);
-        probstat.setBounds(370, 40, 100, 40);
-        probstat.addActionListener(this);
+    public void setProbstat() {
+        Probstat = new JRadioButton("PROBSTAT");
+        add(Probstat);
+        Probstat.setBounds(370, 40, 100, 40);
+        Probstat.addActionListener(this);
     }
 
     public void setradiobutton() {
-        setasd();
-        setpemlan();
-        setmatkomlan();
-        setprobstat();
+        setAsd();
+        setPemlan();
+        setMatkomlan();
+        setProbstat();
         bg = new ButtonGroup();
-        bg.add(asd);
-        bg.add(pemlan);
-        bg.add(matkomlan);
-        bg.add(probstat);
+        bg.add(Asd);
+        bg.add(Pemlan);
+        bg.add(Matkomlan);
+        bg.add(Probstat);
     }
 
-    public void settugas() {
+    public void setTugas() {
         tugas = new JLabel("Tugas : ");
         add(tugas);
         tugas.setBounds(160, 90, 50, 20);
-        nilaitugas = new JTextField("0");
-        add(nilaitugas);
-        nilaitugas.setBounds(220, 90, 50, 20);
+        nilaiTugas = new JTextField("0");
+        add(nilaiTugas);
+        nilaiTugas.setBounds(220, 90, 50, 20);
     }
 
-    public void setkuis() {
+    public void setKuis() {
         kuis = new JLabel("Kuis : ");
         add(kuis);
         kuis.setBounds(160, 120, 50, 20);
-        nilaikuis = new JTextField("0");
-        add(nilaikuis);
-        nilaikuis.setBounds(220, 120, 50, 20);
+        nilaiKuis = new JTextField("0");
+        add(nilaiKuis);
+        nilaiKuis.setBounds(220, 120, 50, 20);
     }
 
-    public void setuts() {
+    public void setUts() {
         uts = new JLabel("UTS : ");
         add(uts);
         uts.setBounds(160, 150, 50, 20);
-        nilaiuts = new JTextField("0");
-        add(nilaiuts);
-        nilaiuts.setBounds(220, 150, 50, 20);
+        nilaiUts = new JTextField("0");
+        add(nilaiUts);
+        nilaiUts.setBounds(220, 150, 50, 20);
     }
 
-    public void setuas() {
+    public void setUas() {
         uas = new JLabel("UAS : ");
         add(uas);
         uas.setBounds(160, 180, 50, 20);
-        nilaiuas = new JTextField("0");
-        add(nilaiuas);
-        nilaiuas.setBounds(220, 180, 50, 20);
+        nilaiUas = new JTextField("0");
+        add(nilaiUas);
+        nilaiUas.setBounds(220, 180, 50, 20);
     }
 
-    public void sethasil() {
+    public void setHasil() {
         hasil = new JLabel("Hasil : ");
         add(hasil);
         hasil.setBounds(160, 210, 50, 20);
-        nilaihasil = new JTextField("0");
-        add(nilaihasil);
-        nilaihasil.setBounds(220, 210, 50, 20);
-        nilaihasil.enable(false);
+        nilaiHasil = new JTextField("0");
+        add(nilaiHasil);
+        nilaiHasil.setBounds(220, 210, 50, 20);
+        nilaiHasil.enable(false);
     }
 
-    public void setlabelnilai() {
-        settugas();
-        setkuis();
-        setuts();
-        setuas();
-        sethasil();
+    public void setLabelNilai() {
+        setTugas();
+        setKuis();
+        setUts();
+        setUas();
+        setHasil();
     }
 
-    public void sethitung() {
+    public void setHitung() {
         hitung = new JButton("Hitung");
         add(hitung);
         hitung.setBounds(190, 240, 100, 20);
         hitung.addActionListener(this);
     }
 
-    public void settampilan() {
+    public void setTampilan() {
         tampilan = new JTextArea();
         add(tampilan);
         tampilan.setBounds(90, 270, 300, 200);
         tampilan.setBackground(Color.WHITE);
-        tampilan.setText("\tHASIL SEMUA MATA KULIAH\n\n" + "ASD\t: " + nilaiasd + "\nPEMLAN\t: " + nilaipemlan + "\nMATKOMLAN\t: " + nilaimatkomlan + "\nPROBSTAT\t: " + nilaiprobstat);
+        tampilan.setText("\tHASIL SEMUA MATA KULIAH\n\n" + "ASD\t: " + nilaiAsd + "\nPEMLAN\t: " + nilaiPemlan + "\nMATKOMLAN\t: " + nilaiMatkomlan + "\nPROBSTAT\t: " + nilaiProbstat);
     }
 
-    public void settampilannilai() {
-        tampilannilai = new JButton("Tampilkan Semua Nilai Matkul");
-        add(tampilannilai);
-        tampilannilai.setBounds(90, 480, 300, 20);
-        tampilannilai.addActionListener(this);
+    public void setTampilanNilai() {
+        tampilanNilai = new JButton("Tampilkan Semua Nilai Matkul");
+        add(tampilanNilai);
+        tampilanNilai.setBounds(90, 480, 300, 20);
+        tampilanNilai.addActionListener(this);
     }
 
     public void defaultradiobutton() {
-        asd.addActionListener(new button());
-        pemlan.addActionListener(new button());
-        matkomlan.addActionListener(new button());
-        probstat.addActionListener(new button());
+        Asd.addActionListener(new button());
+        Pemlan.addActionListener(new button());
+        Matkomlan.addActionListener(new button());
+        Probstat.addActionListener(new button());
     }
 
     NilaiAkhir() {
         setLayout(null);
-        setjudul();
+        setJudul();
         setradiobutton();
-        setlabelnilai();
-        settampilannilai();
-        sethitung();
+        setLabelNilai();
+        setTampilanNilai();
+        setHitung();
         defaultradiobutton();
     }
 
     class button implements ActionListener {
 
         public void actionPerformed(ActionEvent e) {
-            nilaitugas.setText("0");
-            nilaikuis.setText("0");
-            nilaiuts.setText("0");
-            nilaiuas.setText("0");
-            nilaihasil.setText("0");
+            nilaiTugas.setText("0");
+            nilaiKuis.setText("0");
+            nilaiUts.setText("0");
+            nilaiUas.setText("0");
+            nilaiHasil.setText("0");
         }
     }
 
     public void actionPerformed(ActionEvent e) {
         Object source = e.getSource();
-        ntugas = Integer.parseInt(nilaitugas.getText());
-        nkuis = Integer.parseInt(nilaikuis.getText());
-        nuts = Integer.parseInt(nilaiuts.getText());
-        nuas = Integer.parseInt(nilaiuas.getText());
-        nhasil = String.valueOf((ntugas + nkuis + nuts + nuas) / 4);
-        if (asd.isSelected()) {
-            nilaiasd = String.valueOf((ntugas + nkuis + nuts + nuas) / 4);
+        nTugas = Integer.parseInt(nilaiTugas.getText());
+        nKuis = Integer.parseInt(nilaiKuis.getText());
+        nUts = Integer.parseInt(nilaiUts.getText());
+        nUas = Integer.parseInt(nilaiUas.getText());
+        nHasil = String.valueOf((nTugas + nKuis + nUts + nUas) / 4);
+        if (Asd.isSelected()) {
+            nilaiAsd = String.valueOf((nTugas + nKuis + nUts + nUas) / 4);
         }
-        if (pemlan.isSelected()) {
-            nilaipemlan = String.valueOf((ntugas + nkuis + nuts + nuas) / 4);
+        if (Pemlan.isSelected()) {
+            nilaiPemlan = String.valueOf((nTugas + nKuis + nUts + nUas) / 4);
         }
-        if (matkomlan.isSelected()) {
-            nilaimatkomlan = String.valueOf((ntugas + nkuis + nuts + nuas) / 4);
+        if (Matkomlan.isSelected()) {
+            nilaiMatkomlan = String.valueOf((nTugas + nKuis + nUts + nUas) / 4);
         }
-        if (probstat.isSelected()) {
-            nilaiprobstat = String.valueOf((ntugas + nkuis + nuts + nuas) / 4);
+        if (Probstat.isSelected()) {
+            nilaiProbstat = String.valueOf((nTugas + nKuis + nUts + nUas) / 4);
         }
         if (source == hitung) {
-            nilaihasil.setText(nhasil);
+            nilaiHasil.setText(nHasil);
         }
-        if (source == tampilannilai) {
-            settampilan();
+        if (source == tampilanNilai) {
+            setTampilan();
         }
     }
 }
