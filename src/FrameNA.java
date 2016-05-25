@@ -40,6 +40,11 @@ public class FrameNA extends Frame {
         rbProbstat = new JRadioButton("Probstat", false);
         this.add(rbProbstat).setBounds(240, 60, 80, 20);
 
+        rbASD.addItemListener(new mainAction());
+        rbPemlan.addItemListener(new mainAction());
+        rbMatkomlan.addItemListener(new mainAction());
+        rbProbstat.addItemListener(new mainAction());
+
         rbg.add(rbASD);
         rbg.add(rbPemlan);
         rbg.add(rbMatkomlan);
@@ -88,5 +93,28 @@ public class FrameNA extends Frame {
         btnTampil = new Button("Tampilkan Semua Nilai Matkul");
         add(btnTampil);
         btnTampil.setBounds(70, 410, 220, 20);
+
+        btnHitung.addActionListener(new mainAction());
+        btnTampil.addActionListener(new mainAction());
+    }
+
+    class mainAction implements ItemListener, ActionListener {
+
+        @Override
+        public void itemStateChanged(ItemEvent e) {
+            txtTugas.setText("0");
+            txtKuis.setText("0");
+            txtUTS.setText("0");
+            txtUAS.setText("0");
+            txtHasil.setText("0");
+        }
+
+        @Override
+        public void actionPerformed(ActionEvent ae) {
+            int tugas = Integer.parseInt(txtTugas.getText().trim());
+            int kuis = Integer.parseInt(txtKuis.getText().trim());
+            int UTS = Integer.parseInt(txtUTS.getText().trim());
+            int UAS = Integer.parseInt(txtUAS.getText().trim());
+        }
     }
 }
