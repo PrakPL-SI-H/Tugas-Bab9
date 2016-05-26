@@ -1,17 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-/**
- *
- * @author irwin deriyan
- */
-public class LatihanBab1 {
-    public static void main(String[] args) {
-        System.out.println("tess");
-        
-        
-    }
-    
-}
+import java.awt.Font;
+import java.awt.Label;
+import java.awt.TextField;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JRadioButton;
+import javax.swing.JTextArea;
