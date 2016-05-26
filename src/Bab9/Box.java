@@ -135,6 +135,11 @@ public class Box extends Frame{
 
         @Override
         public void itemStateChanged(ItemEvent e) {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            TxtTugas.setText("0");
+            TxtKuis.setText("0");
+            TxtUts.setText("0");
+            TxtUas.setText("0");
+            TxtHasil.setText("0");
         }
     }
+}
