@@ -45,7 +45,60 @@ public class Box extends Frame{
         RbProbstat.addItemListener(new mainAction());
         Btn.add(RbProbstat);
         
-        
+        LbTugas = new Label("Duty");
+        add(LbTugas);
+        LbTugas.setBounds(170, 130, 62, 20);
+
+        TxtTugas = new TextField("0");
+        add(TxtTugas);
+        TxtTugas.setBounds(270, 130, 60, 20);
+
+        LbKuis = new Label("Quiz");
+        add(LbKuis);
+        LbKuis.setBounds(170, 170, 70, 20);
+
+        TxtKuis = new TextField("0");
+        add(TxtKuis);
+        TxtKuis.setBounds(270, 170, 60, 20);
+
+        LbUts = new Label("Mid Test");
+        add(LbUts);
+        LbUts.setBounds(170, 210, 70, 20);
+
+        TxtUts = new TextField("0");
+        add(TxtUts);
+        TxtUts.setBounds(270, 210, 60, 20);
+
+        LbUas = new Label("UAS");
+        add(LbUas);
+        LbUas.setBounds(170, 250, 70, 20);
+
+        TxtUas = new TextField("0");
+        add(TxtUas);
+        TxtUas.setBounds(270, 250, 60, 20);
+
+        LbHasil = new Label("Result");
+        add(LbHasil);
+        LbHasil.setBounds(170, 290, 70, 20);
+
+        TxtHasil = new TextField("0");
+        add(TxtHasil);
+        TxtHasil.setBounds(270, 290, 60, 20);
+
+        TBox = new TextArea();
+        add(TBox);
+        TBox.setBounds(70, 350, 350, 200);
+
+        BtnHasil = new Button("Count");
+        add(BtnHasil);
+        BtnHasil.setBounds(200, 320, 100, 20);
+
+        BtnShow = new Button("Show Score");
+        add(BtnShow);
+        BtnShow.setBounds(170, 600, 150, 30);
+
+        BtnHasil.addActionListener(new mainAction());
+        BtnShow.addActionListener(new mainAction());
     }
     
      class mainAction implements ActionListener, ItemListener {
