@@ -104,4 +104,15 @@ hasilProbstat = String.valueOf(tugas / 8 + kuis / 4 + UTS / 4 + UAS / 8);
 txtHasil.setText(hasilProbstat);
 }
 }
+
+class tampil extends MouseAdapter {
+public void mouseClicked(MouseEvent e) {
+jtxtArea.setText(
+"===========HASIL NILAI SEMUA MATA KULIAH =========== \n\n" + "1) ASD\t: " + hasilASD + "\n\n2) PEMLAN\t: "
++ hasilPemlan + "\n\n3) MATKOMLAN\t: " + hasilMatkomlan
++ "\n\n4) PROBSTAT\t: " + hasilProbstat);
+}
+}
+}
+
 }
