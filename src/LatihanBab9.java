@@ -80,3 +80,28 @@ jtxtArea.setBounds(60, 300, 350, 240);
 setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 show();
 }
+
+class moslistener extends MouseAdapter {
+public void mouseClicked(MouseEvent e) {
+int tugas = Integer.parseInt(txtTugas.getText().trim());
+int kuis = Integer.parseInt(txtKuis.getText().trim());
+int UTS = Integer.parseInt(txtUTS.getText().trim());
+int UAS = Integer.parseInt(txtUAS.getText().trim());
+if (jrbASD.isSelected()) {
+hasilASD = String.valueOf(tugas / 8 + kuis / 4 + UTS / 2 + UAS / 6);
+txtHasil.setText(hasilASD);
+}
+if (jrbPemlan.isSelected()) {
+hasilPemlan = String.valueOf(tugas / 6 + kuis / 4 + UTS / 4 + UAS / 2);
+txtHasil.setText(hasilPemlan);
+}
+if (jrbMatkomlan.isSelected()) {
+hasilMatkomlan = String.valueOf(tugas / 4 + kuis / 4 + UTS / 2 + UAS / 6);
+txtHasil.setText(hasilMatkomlan);
+}
+if (jrbProbstat.isSelected()) {
+hasilProbstat = String.valueOf(tugas / 8 + kuis / 4 + UTS / 4 + UAS / 8);
+txtHasil.setText(hasilProbstat);
+}
+}
+}
