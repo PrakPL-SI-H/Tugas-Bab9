@@ -12,7 +12,7 @@ public class FrameNA extends Frame {
     TextField txtTugas, txtKuis, txtUTS, txtUAS, txtHasil;
     Button btnHitung, btnTampil;
     TextArea taNilai;
-    String asd = "-", pemlan = "-", matkomlan = "-", probstat = "-";
+    String nAsd = "-", nPemlan = "-", nMatkomlan = "-", nProbstat = "-";
 
     public FrameNA() {
         setLayout(null);
@@ -31,7 +31,7 @@ public class FrameNA extends Frame {
 
         rbg = new ButtonGroup();
 
-        rbASD = new JRadioButton("ASD", false);
+        rbASD = new JRadioButton("ASD", true);
         this.add(rbASD).setBounds(30, 60, 50, 20);
         rbPemlan = new JRadioButton("Pemlan", false);
         this.add(rbPemlan).setBounds(80, 60, 70, 20);
@@ -68,19 +68,19 @@ public class FrameNA extends Frame {
 
         txtTugas = new TextField("0");
         add(txtTugas);
-        txtTugas.setBounds(170, 90, 60, 20);
+        txtTugas.setBounds(170, 90, 80, 20);
         txtKuis = new TextField("0");
         add(txtKuis);
-        txtKuis.setBounds(170, 120, 60, 20);
+        txtKuis.setBounds(170, 120, 80, 20);
         txtUTS = new TextField("0");
         add(txtUTS);
-        txtUTS.setBounds(170, 150, 60, 20);
+        txtUTS.setBounds(170, 150, 80, 20);
         txtUAS = new TextField("0");
         add(txtUAS);
-        txtUAS.setBounds(170, 180, 60, 20);
-        txtHasil = new TextField("0");
+        txtUAS.setBounds(170, 180, 80, 20);
+        txtHasil = new TextField("");
         add(txtHasil);
-        txtHasil.setBounds(170, 210, 60, 20);
+        txtHasil.setBounds(170, 210, 80, 20);
 
         btnHitung = new Button("Hitung");
         add(btnHitung);
@@ -106,37 +106,45 @@ public class FrameNA extends Frame {
             txtKuis.setText("0");
             txtUTS.setText("0");
             txtUAS.setText("0");
-            txtHasil.setText("0");
+            txtHasil.setText("");
         }
 
         @Override
         public void actionPerformed(ActionEvent ae) {
-            int tugas = Integer.parseInt(txtTugas.getText().trim());
-            int kuis = Integer.parseInt(txtKuis.getText().trim());
-            int UTS = Integer.parseInt(txtUTS.getText().trim());
-            int UAS = Integer.parseInt(txtUAS.getText().trim());
+            try {
+                double tugas = Double.parseDouble(txtTugas.getText().trim());
+                double kuis = Double.parseDouble(txtKuis.getText().trim());
+                double UTS = Double.parseDouble(txtUTS.getText().trim());
+                double UAS = Double.parseDouble(txtUAS.getText().trim());
 
-            if (ae.getSource() == btnHitung) {
-                if (rbASD.isSelected()) {
-                    asd = String.valueOf((tugas + kuis + UTS + UAS) / 4);
-                    txtHasil.setText(asd);
-                } else if (rbPemlan.isSelected()) {
-                    pemlan = String.valueOf((tugas * 0.1) + (kuis * 0.3) + (UTS * 0.3) + (UAS * 0.3));
-                    txtHasil.setText(pemlan);
-                } else if (rbMatkomlan.isSelected()) {
-                    matkomlan = String.valueOf((tugas * 0.1) + (kuis * 0.2) + (UTS * 0.3) + (UAS * 0.4));
-                    txtHasil.setText(matkomlan);
-                } else if (rbProbstat.isSelected()) {
-                    probstat = String.valueOf((tugas * 0.3) + (kuis * 0.2) + (UTS * 0.25) + (UAS * 0.25));
-                    txtHasil.setText(probstat);
+                if (ae.getSource() == btnHitung) {
+                    if (rbASD.isSelected()) {
+                        Asd asd = new Asd(tugas, kuis, UTS, UAS);
+                        txtHasil.setText(asd.getHasil());
+                        nAsd = asd.getHasil();
+                    } else if (rbPemlan.isSelected()) {
+                        Pemlan pl = new Pemlan(tugas, kuis, UTS, UAS);
+                        txtHasil.setText(pl.getHasil());
+                        nPemlan = pl.getHasil();
+                    } else if (rbMatkomlan.isSelected()) {
+                        Matkomlan mkl = new Matkomlan(tugas, kuis, UTS, UAS);
+                        txtHasil.setText(mkl.getHasil());
+                        nMatkomlan = mkl.getHasil();
+                    } else if (rbProbstat.isSelected()) {
+                        Probstat ps = new Probstat(tugas, kuis, UTS, UAS);
+                        txtHasil.setText(ps.getHasil());
+                        nProbstat = ps.getHasil();
+                    }
                 }
+            } catch (NumberFormatException n) {
+                txtHasil.setText("Invalid input!");
             }
             if (ae.getSource() == btnTampil) {
                 taNilai.setText("HASIL NILAI SEMUA MATA KULIAH\n\n"
-                        + "ASD\t\t: " + asd + "\n"
-                        + "Pemlan\t\t: " + pemlan + "\n"
-                        + "Matkomlan\t: " + matkomlan + "\n"
-                        + "Probstat\t\t: " + probstat);
+                        + "ASD\t\t: " + nAsd + "\n"
+                        + "Pemlan\t\t: " + nPemlan + "\n"
+                        + "Matkomlan\t: " + nMatkomlan + "\n"
+                        + "Probstat\t\t: " + nProbstat);
             }
         }
     }
